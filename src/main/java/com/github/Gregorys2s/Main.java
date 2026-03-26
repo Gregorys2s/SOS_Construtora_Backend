@@ -1,4 +1,4 @@
-package com.github.Gregorys2s;
+/*package com.github.Gregorys2s;
 
 import org.springframework.boot.SpringApplication;
 
@@ -10,4 +10,7 @@ public class Main {
             SpringApplication.run(SosConstrutoraApplication.class, args);
 
         }
-    }
+    }*/
+    
+    
+    //roda o arquivo SosConstrutoraAppli
