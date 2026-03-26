@@ -29,6 +29,15 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>4.0.2</version>
         </dependency>
+        <!-- 
+        lombok pra deixar o codigo mais limpo sem setters e getters
+        -->
+        <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <optional>true</optional>
+        </dependency>
+
 
 
         <dependency>
