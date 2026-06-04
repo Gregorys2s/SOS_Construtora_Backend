@@ -11,7 +11,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.5</version>
+        <version>4.0.3</version>
         <relativePath/>
     </parent>
 
@@ -27,12 +27,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>tools.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>3.1.0</version>
+            <version>4.0.2</version>
         </dependency>
         <!--
         lombok pra deixar o codigo mais limpo sem setters e getters
@@ -48,13 +43,14 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.7.10</version>
+            <version>42.7.3</version>
         </dependency>
     </dependencies>
 
 
     <properties>
-        <java.version>25</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

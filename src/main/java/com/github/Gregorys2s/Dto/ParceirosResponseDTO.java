@@ -14,5 +14,5 @@ public class ParceirosResponseDTO {
     private String email;
     private String telefone;
     private String logo_url;
-
+    private EnderecoRequestDTO endereco;
 }

@@ -18,19 +18,19 @@ public class Parceiros {
     private Long id;
 
     @Column(name = "nome_social",nullable = false)
-    private String nome_social;
+    private String nomeSocial;
 
     @Column(name = "nome_fantasia")
-    private String nome_fantasia;
+    private String nomeFantasia;
 
-    @Column(name = "cpnj", nullable = false, length = 14)
-    private String cpnj;
+    @Column(name = "cnpj", nullable = false, length = 14)
+    private String cnpj;
 
     @Column(name = "email",nullable = false)
     private String email;
 
     @Column(name = "telefone", nullable = false)
-    private Integer telefone;
+    private String telefone;
 
     @Column(name = "logo_url")
     private String logo_url;
