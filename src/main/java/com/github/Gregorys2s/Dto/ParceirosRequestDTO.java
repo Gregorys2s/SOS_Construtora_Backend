@@ -23,5 +23,7 @@ public class ParceirosRequestDTO {
     private String email;
     private String telefone;
     private String logo_url;
-
+    private EnderecoRequestDTO endereco;
+    private CategoriaRequestDto categoria;
+    private CadastroRequestDTO cadastro;
 }

@@ -2,6 +2,7 @@ package com.github.Gregorys2s.Controller;
 
 import com.github.Gregorys2s.Dto.ParceirosRequestDTO;
 import com.github.Gregorys2s.Dto.ParceirosResponseDTO;
+import com.github.Gregorys2s.Entity.Parceiros;
 import com.github.Gregorys2s.Service.ParceirosService;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +21,7 @@ public class ParceirosController {
         Parceiros parceiros = service.crear(dto);
 
         return new ParceirosResponseDTO(
-                parceiros.getNome()
+                parceiros.getNomeSocial()
         );
     }
 
