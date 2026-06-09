@@ -1,7 +1,7 @@
 package com.github.Gregorys2s.Controller;
 
-import com.github.Gregorys2s.Dto.ParceirosRequestDTO;
-import com.github.Gregorys2s.Dto.ParceirosResponseDTO;
+import com.github.Gregorys2s.Dto.Parceiros.ParceirosRequestDTO;
+import com.github.Gregorys2s.Dto.Parceiros.ParceirosResponseDTO;
 import com.github.Gregorys2s.Entity.Parceiros;
 import com.github.Gregorys2s.Service.ParceirosService;
 import org.springframework.web.bind.annotation.*;

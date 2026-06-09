@@ -1,4 +1,4 @@
-package com.github.Gregorys2s.Dto;
+package com.github.Gregorys2s.Dto.Endereco;
 
 import lombok.*;
 

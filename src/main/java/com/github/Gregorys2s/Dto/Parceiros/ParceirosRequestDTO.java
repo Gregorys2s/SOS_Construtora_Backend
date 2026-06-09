@@ -1,4 +1,4 @@
-package com.github.Gregorys2s.Dto;
+package com.github.Gregorys2s.Dto.Parceiros;
 /*CREATE TABLE parceiros (
   id SERIAL PRIMARY KEY,
   nome_social VARCHAR(50) NOT NULL,
@@ -9,6 +9,9 @@ package com.github.Gregorys2s.Dto;
   logo_url text
 );*/
 
+import com.github.Gregorys2s.Dto.Cadastro.CadastroRequestDTO;
+import com.github.Gregorys2s.Dto.Categoria.CategoriaRequestDto;
+import com.github.Gregorys2s.Dto.Endereco.EnderecoRequestDTO;
 import lombok.*;
 
 @Getter

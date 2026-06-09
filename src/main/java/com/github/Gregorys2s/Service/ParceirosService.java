@@ -1,7 +1,7 @@
 package com.github.Gregorys2s.Service;
 
-import com.github.Gregorys2s.Dto.ParceirosRequestDTO;
-import com.github.Gregorys2s.Dto.SegmentoRequestDTO;
+import com.github.Gregorys2s.Dto.Parceiros.ParceirosRequestDTO;
+import com.github.Gregorys2s.Dto.Segmentos.SegmentoRequestDTO;
 import com.github.Gregorys2s.Entity.*;
 import com.github.Gregorys2s.Repository.*;
 import org.springframework.stereotype.Service;
@@ -45,9 +45,6 @@ public class ParceirosService {
 
         List<Segmento> segmentos = segmentoRepository.findBySegmentosIn(nomesSegmentos);
 
-
-//        segmentos = segmentoRepository.saveAll(segmentos);
-
         Categoria categoria = categoriaRepository.save(
                 Categoria.builder()
                         .segmento(segmentos)
@@ -79,9 +76,7 @@ public class ParceirosService {
     }
 
     public List<Parceiros> obterDados() {
-
-        List<Parceiros> parceiros = repository.findAll();
-        return parceiros;
+        return repository.findAll();
     }
 }
 

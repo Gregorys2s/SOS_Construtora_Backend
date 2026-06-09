@@ -1,5 +1,7 @@
-package com.github.Gregorys2s.Dto;
+package com.github.Gregorys2s.Dto.Categoria;
 
+import com.github.Gregorys2s.Dto.Segmentos.SegmentoRequestDTO;
+import com.github.Gregorys2s.Entity.Categoria;
 import lombok.*;
 
 import java.util.List;
@@ -10,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class CategoriaRequestDto {
+
     private boolean destaque;
     private Integer ordemDeExibicao;
     private List<SegmentoRequestDTO> segmentos;
