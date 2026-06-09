@@ -6,6 +6,8 @@ import com.github.Gregorys2s.Entity.Parceiros;
 import com.github.Gregorys2s.Service.ParceirosService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/parceiros")
 public class ParceirosController {
@@ -13,7 +15,7 @@ public class ParceirosController {
     ParceirosService service;
 
     public ParceirosController(ParceirosService parceiro) {
-        this.parceiro = parceiro;
+        this.service = parceiro;
     }
 
     @PostMapping
@@ -26,12 +28,21 @@ public class ParceirosController {
     }
 
     @GetMapping
-    public ParceirosResponseDTO obtener ()
+    public List<ParceirosResponseDTO> obter()
     {
-        Parceiros parceiros = service.obterDados(dto);
+        List<Parceiros> parceiros = service.obterDados();
+        return parceiros.stream()
+                .map(ParceirosResponseDTO::new)
+                .toList();
 
-        return new ParceirosResponseDTO(
-                parceiros.getNome()
-        );
     }
+
+    //exemplo especifico de como pegar dados
+//    @GetMapping("/nomes")
+//    public List<String> listarNomes() {
+//        return service.obterDados()
+//                .stream()
+//                .map(Parceiros::getNomeSocial)
+//                .toList();
+//    }
 }

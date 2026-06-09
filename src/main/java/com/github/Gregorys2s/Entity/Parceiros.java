@@ -15,7 +15,7 @@ public class Parceiros {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "nome_social",nullable = false)
     private String nomeSocial;
@@ -39,7 +39,7 @@ public class Parceiros {
     @JoinColumn(name = "endereco_id")
     private Endereco endereco;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "cadastro_id")
     private Cadastro cadastro;
 

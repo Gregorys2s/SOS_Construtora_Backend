@@ -6,7 +6,7 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "cadastro")
+@Table(name = "cadastros")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,12 +16,17 @@ import java.time.LocalDateTime;
 public class Cadastro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "data", nullable = false, updatable = false)
     private LocalDateTime dataCadastro;
 
     @Column(name = "funcionario", columnDefinition = "TEXT")
     private String funcionario;
+
+    @PrePersist
+    public void prePersist() {
+        this.dataCadastro = LocalDateTime.now();
+    }
 
 }

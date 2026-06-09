@@ -7,6 +7,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProfissoesRequestDTO {
-    private String profissao;
+public class SegmentoRequestDTO {
+    private String segmentos;
 }
