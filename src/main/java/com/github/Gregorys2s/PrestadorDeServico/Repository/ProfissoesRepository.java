@@ -1,4 +1,4 @@
-package com.github.Gregorys2s.PrestadorDeServico.Service;
+package com.github.Gregorys2s.PrestadorDeServico.Repository;
 
 import com.github.Gregorys2s.PrestadorDeServico.Entity.Profissoes;
 import org.springframework.data.jpa.repository.JpaRepository;

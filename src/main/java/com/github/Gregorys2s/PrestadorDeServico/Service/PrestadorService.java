@@ -10,6 +10,8 @@ import com.github.Gregorys2s.PrestadorDeServico.Entity.CategoriaPrestadorDeServi
 import com.github.Gregorys2s.Compartilhados.Entidade.Endereco;
 import com.github.Gregorys2s.PrestadorDeServico.Entity.Profissoes;
 import com.github.Gregorys2s.PrestadorDeServico.Repository.CategoriaPrestadorRepository;
+import com.github.Gregorys2s.PrestadorDeServico.Repository.PrestadorDeServicoRepository;
+import com.github.Gregorys2s.PrestadorDeServico.Repository.ProfissoesRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
