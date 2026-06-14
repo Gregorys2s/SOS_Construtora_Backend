@@ -48,4 +48,7 @@ public class Parceiros {
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private CategoriaParceiros categoria;
+
+    @Column(name = "estatus")
+    private String estatus;
 }

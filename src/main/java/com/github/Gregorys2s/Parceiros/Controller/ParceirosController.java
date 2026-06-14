@@ -19,8 +19,8 @@ public class ParceirosController {
     }
 
     @PostMapping
-    public ParceirosResponseDTO crear(@RequestBody ParceirosRequestDTO dto) {
-        Parceiros parceiros = service.crear(dto);
+    public ParceirosResponseDTO criar(@RequestBody ParceirosRequestDTO dto) {
+        Parceiros parceiros = service.criar(dto);
 
         return new ParceirosResponseDTO(
                 parceiros.getNomeSocial()

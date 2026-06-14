@@ -9,6 +9,8 @@ import com.github.Gregorys2s.Compartilhados.Entidade.Cadastro;
 import com.github.Gregorys2s.Parceiros.Entity.CategoriaParceiros;
 import com.github.Gregorys2s.Compartilhados.Entidade.Endereco;
 import com.github.Gregorys2s.Parceiros.Entity.Segmento;
+import com.github.Gregorys2s.Parceiros.Enum.Estatus;
+import com.github.Gregorys2s.Parceiros.Enum.SegmentosEnum;
 import com.github.Gregorys2s.Parceiros.Repository.CategoriaParceirosRepository;
 import com.github.Gregorys2s.Parceiros.Repository.ParceirosRepository;
 import com.github.Gregorys2s.Parceiros.Repository.SegmentoRepository;
@@ -33,7 +35,7 @@ public class ParceirosService {
         this.enderecoRepository = enderecoRepository;
     }
 
-    public Parceiros crear(ParceirosRequestDTO dto) {
+    public Parceiros criar(ParceirosRequestDTO dto) {
 
         Endereco endereco = enderecoRepository.save(Endereco.builder()
                 .cep(dto.getEndereco().getCep())
@@ -45,13 +47,20 @@ public class ParceirosService {
                 .estado(dto.getEndereco().getEstado())
                 .build());
 
-        List<String> nomesSegmentos = dto.getCategoria()
+        List<Segmento> segmentos = dto.getCategoria()
                 .getSegmentos()
                 .stream()
                 .map(SegmentoRequestDTO::getSegmentos)
-                .toList();
+                .map(nome -> {
+                    SegmentosEnum.ProcurarSegmento(nome);
 
-        List<Segmento> segmentos = segmentoRepository.findBySegmentosIn(nomesSegmentos);
+                    return segmentoRepository.save(
+                            Segmento.builder()
+                                    .segmentos(nome)
+                                    .build()
+                    );
+                })
+                .toList();
 
         CategoriaParceiros categoria = categoriaRepository.save(
                 CategoriaParceiros.builder()
@@ -76,6 +85,7 @@ public class ParceirosService {
                         .endereco(endereco)
                         .categoria(categoria)
                         .cadastro(cadastro)
+                        .estatus(Estatus.ESPERA.toString())
                         .build();
 
         return repository.save(parceiros);

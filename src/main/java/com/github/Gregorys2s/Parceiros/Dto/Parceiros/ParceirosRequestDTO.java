@@ -29,4 +29,5 @@ public class ParceirosRequestDTO {
     private EnderecoRequestDTO endereco;
     private CategoriaParceirosRequestDto categoria;
     private CadastroRequestDTO cadastro;
+    private String estatus;
 }
